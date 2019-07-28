@@ -23,6 +23,19 @@
   color: #61dafb;
 }
 
+.ListItem {
+  border: 1px solid #555;
+  margin: 5px auto;
+  width: 200px;
+  padding: 2px;
+}
+
+.CloseItem {
+  float: right;
+  color: #f00;
+  font-weight: bold;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

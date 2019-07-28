@@ -1,19 +1,22 @@
 import React from 'react';
 
-const renderList = items => {
+const renderList = (items, removeItem) => {
   return items.map(item => {
-    return <li key={item}>{item}</li>;
+    return (
+      <div className="ListItem" id={`item_${item.id}`} key={item.id}>
+        {item.name}
+        <div className="CloseItem" onClick={() => removeItem(item.id)}>
+          X
+        </div>
+      </div>
+    );
   });
 };
 
 const InitialList = props => {
-  const { items } = props;
+  const { items, removeItem } = props;
 
-  return (
-    <>
-      <ul>{renderList(items)}</ul>
-    </>
-  );
+  return <div>{renderList(items, removeItem)}</div>;
 };
 
 export default InitialList;
