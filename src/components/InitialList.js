@@ -2,10 +2,12 @@ import React from 'react';
 
 const renderList = (items, removeItem) => {
   return items.map(item => {
+    const { id, name } = item;
+
     return (
-      <div className="ListItem" id={`item_${item.id}`} key={item.id}>
-        {item.name}
-        <div className="CloseItem" onClick={() => removeItem(item.id)}>
+      <div className="ListItem" id={`item_${id}`} key={id}>
+        {name}
+        <div className="CloseItem" onClick={() => removeItem(id)}>
           X
         </div>
       </div>

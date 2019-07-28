@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import InitialList from './InitialList';
 
-const Selector = () => {
+const Selector = ({ onFinish }) => {
   const [choices, setChoices] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [itemIndex, setItemIndex] = useState(0);
@@ -11,6 +11,7 @@ const Selector = () => {
       <form
         onSubmit={e => {
           e.preventDefault();
+          if (inputValue === '') return;
           const id = itemIndex;
           const newItem = { id, name: inputValue };
           setChoices([...choices, newItem]);
@@ -18,13 +19,20 @@ const Selector = () => {
           setItemIndex(itemIndex + 1);
         }}
       >
-        <input
-          type="text"
-          id="itemInput"
-          onChange={e => setInputValue(e.target.value)}
-          value={inputValue}
-        />
-        <input type="submit" value="Add" />
+        <div id="itemAdd">
+          <input
+            type="text"
+            id="itemInput"
+            onChange={e => setInputValue(e.target.value)}
+            value={inputValue}
+          />
+          <input id="addButton" type="submit" value="Add" />
+        </div>
+        <div id="done">
+          <button id="doneButton" type="button" onClick={() => onFinish()}>
+            Done Adding
+          </button>
+        </div>
       </form>
 
       <InitialList
