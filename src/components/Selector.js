@@ -8,6 +8,9 @@ const Selector = ({ onFinish }) => {
 
   return (
     <>
+      <p className="header">WhereToEat</p>
+      <p className="subHeader">The Gastronomical Decision Engine</p>
+
       <form
         onSubmit={e => {
           e.preventDefault();

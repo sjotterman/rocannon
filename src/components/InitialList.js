@@ -5,9 +5,9 @@ const renderList = (items, removeItem) => {
     const { id, name } = item;
 
     return (
-      <div className="ListItem" id={`item_${id}`} key={id}>
+      <div className="listItem" id={`item_${id}`} key={id}>
         {name}
-        <div className="CloseItem" onClick={() => removeItem(id)}>
+        <div className="closeItem" onClick={() => removeItem(id)}>
           X
         </div>
       </div>
