@@ -1,6 +1,11 @@
-describe("Initial page load", function() {
-  it('finds the content "type"', function() {
+describe("Basic functionality", function() {
+  it("Adds an item", function() {
     cy.visit("localhost:3000");
-    cy.contains("Edit src/App.js and save to reload.");
+    cy.get(".App")
+      .contains("Waffle House")
+      .should("not.exist");
+    cy.get(".App #itemInput").type("Waffle House");
+    cy.get('.App input[type="submit"').click();
+    cy.get(".ListItem").contains("Waffle House");
   });
 });
