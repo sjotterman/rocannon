@@ -9,6 +9,7 @@ const Selector = () => {
   return (
     <>
       <form
+        id="selectorForm"
         onSubmit={e => {
           e.preventDefault();
           const id = itemIndex;
