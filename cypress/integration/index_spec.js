@@ -1,6 +1,6 @@
 describe("Basic functionality", function() {
   it("Adds an item", function() {
-    cy.visit("localhost:3000");
+    cy.visit("/");
     cy.get(".App")
       .contains("Waffle House")
       .should("not.exist");
