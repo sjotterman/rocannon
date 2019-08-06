@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Selector from './components/Selector';
 import Ranker from './components/Ranker';
+
 
 function App() {
   const [stage, setStage] = useState('entry');

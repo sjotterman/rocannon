@@ -12,6 +12,7 @@ const Selector = ({ onFinish }) => {
       <p className="subHeader">The Gastronomical Decision Engine</p>
 
       <form
+        id="selectorForm"
         onSubmit={e => {
           e.preventDefault();
           if (inputValue === '') return;
