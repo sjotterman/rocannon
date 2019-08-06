@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import InitialList from './InitialList';
 
-const Selector = ({ onFinish }) => {
-  const [choices, setChoices] = useState([]);
+const Selector = ({ onFinish, choices, setChoices }) => {
   const [inputValue, setInputValue] = useState('');
   const [itemIndex, setItemIndex] = useState(0);
 
