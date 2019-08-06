@@ -1,7 +1,6 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Selector from "./components/Selector";
+import React from 'react';
+import './App.css';
+import Selector from './components/Selector';
 
 function App() {
   return (
