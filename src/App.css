@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: #222;
+  padding: 20px;
+  font: 16px Barlow, sans-serif;
+  color: #999;
+  height: 100vh;
 }
 
 .App-logo {
@@ -23,17 +28,58 @@
   color: #61dafb;
 }
 
-.ListItem {
-  border: 1px solid #555;
-  margin: 5px auto;
-  width: 200px;
-  padding: 2px;
+.header {
+  font: bold 48px Pacifico, cursive;
+  margin: 5px;
+  color: #fe019a;
 }
 
-.CloseItem {
-  float: right;
+.subHeader {
+  font-weight: bold;
+}
+
+.listItem {
+  position: relative;
+  background-color: #555;
+  margin: 10px auto;
+  width: 220px;
+  padding: 10px 4px;
+}
+
+.closeItem {
+  position: absolute;
+  top: 0;
+  right: 3px;
   color: #f00;
   font-weight: bold;
+}
+
+input[type='button'],
+input[type='submit'],
+button {
+  font: 14px Barlow, sans-serif;
+  padding: 8px 20px;
+  margin: 7px;
+  color: #222;
+  background-color: #888;
+  border: none;
+}
+
+input[type='text'] {
+  font: 14px Barlow, sans-serif;
+  padding: 6px;
+  margin: 7px;
+}
+
+input[type='button']:active,
+input[type='submit']:active,
+button:active {
+  background-color: #555;
+}
+
+input:focus,
+button:focus {
+  outline-width: 0;
 }
 
 @keyframes App-logo-spin {

@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Selector from './components/Selector';
+import Ranker from './components/Ranker';
+
 
 function App() {
+  const [stage, setStage] = useState('entry');
+
   return (
     <div className="App">
-      <Selector />
+      {stage === 'entry' && (
+        <Selector
+          onFinish={() => {
+            setStage('ranker');
+          }}
+        />
+      )}
+      {stage === 'ranker' && <Ranker />}
     </div>
   );
 }
