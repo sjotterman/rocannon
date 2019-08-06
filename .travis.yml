@@ -10,4 +10,5 @@ addons:
 
 script:
   - npm test
+  - npm run build
   - npm run cy:run-ci
