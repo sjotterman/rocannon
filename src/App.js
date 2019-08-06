@@ -7,6 +7,21 @@ import Ranker from './components/Ranker';
 function App() {
   const [stage, setStage] = useState('entry');
 
+  const items = [
+    {
+      id: 1,
+      name: "Waffle House"
+    },
+    {
+      id: 2,
+      name: "Sam's Freezer"
+    },
+    {
+      id: 3,
+      name: "Taco Bell"
+    }
+  ]
+
   return (
     <div className="App">
       {stage === 'entry' && (
@@ -16,7 +31,7 @@ function App() {
           }}
         />
       )}
-      {stage === 'ranker' && <Ranker />}
+      {stage === 'ranker' && <Ranker listItems={items} />}
     </div>
   );
 }
