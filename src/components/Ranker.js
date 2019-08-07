@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import RankerList from './RankerList';
 
 class Ranker extends React.Component {
