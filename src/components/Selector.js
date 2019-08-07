@@ -32,7 +32,12 @@ const Selector = ({ onFinish, choices, setChoices }) => {
           <input id="addButton" type="submit" value="Add" />
         </div>
         <div id="done">
-          <button id="doneButton" type="button" onClick={() => onFinish()}>
+          <button id="doneButton" type="button" onClick={() => {
+            if (choices.length > 0) {
+              onFinish()
+            }
+          }
+          }>
             Done Adding
           </button>
         </div>
