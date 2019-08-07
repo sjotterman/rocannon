@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import InitialList from './InitialList';
 
-const Selector = ({ onFinish }) => {
-  const [choices, setChoices] = useState([]);
+const Selector = ({ onFinish, choices, setChoices }) => {
   const [inputValue, setInputValue] = useState('');
   const [itemIndex, setItemIndex] = useState(0);
 
@@ -33,7 +32,12 @@ const Selector = ({ onFinish }) => {
           <input id="addButton" type="submit" value="Add" />
         </div>
         <div id="done">
-          <button id="doneButton" type="button" onClick={() => onFinish()}>
+          <button id="doneButton" type="button" onClick={() => {
+            if (choices.length > 0) {
+              onFinish()
+            }
+          }
+          }>
             Done Adding
           </button>
         </div>

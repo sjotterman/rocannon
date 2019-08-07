@@ -54,6 +54,14 @@
   font-weight: bold;
 }
 
+.voteButtons {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  font-weight: bold;
+}
+
 input[type='button'],
 input[type='submit'],
 button {
