@@ -3,11 +3,10 @@ import RankerList from './RankerList';
 
 class Ranker extends React.Component {
   render() {
-    const { listItems } = this.props;
+    const { listItems, setChoices } = this.props;
     return <RankerList
       items={listItems}
-      removeItem={() => {
-      }}
+      setChoices={setChoices}
     />
   }
 }

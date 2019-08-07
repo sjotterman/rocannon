@@ -25,9 +25,14 @@ describe("Basic functionality", function () {
       .should("not.exist");
     cy.get("#doneButton").click();
     // cy.get(".App").contains("Ranker");
-    cy.get(".listItem").contains("Waffle House");
-    cy.get(".listItem").contains("On Tap");
-    cy.get(".listItem").contains("McDonald's");
-    cy.get(".listItem").contains("Taco Bell");
+    cy.get(".listItem#item_0").contains("Waffle House");
+    cy.get(".listItem#item_1").contains("On Tap");
+    cy.get(".listItem#item_2").contains("McDonald's");
+    cy.get(".listItem#item_3").contains("Taco Bell");
+    cy.get("#item_1 .voteItemUp").click();
+    cy.get(".listItem#item_0").contains("On Tap");
+    cy.get(".listItem#item_1").contains("Waffle House");
+    cy.get(".listItem#item_2").contains("McDonald's");
+    cy.get(".listItem#item_3").contains("Taco Bell");
   });
 });

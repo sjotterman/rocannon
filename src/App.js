@@ -20,7 +20,7 @@ function App() {
           }}
         />
       )}
-      {stage === 'ranker' && <Ranker listItems={choices} />}
+      {stage === 'ranker' && <Ranker listItems={choices} setChoices={setChoices} />}
     </div>
   );
 }
