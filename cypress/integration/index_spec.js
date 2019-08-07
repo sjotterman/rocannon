@@ -34,5 +34,10 @@ describe("Basic functionality", function () {
     cy.get(".listItem#item_1").contains("Waffle House");
     cy.get(".listItem#item_2").contains("McDonald's");
     cy.get(".listItem#item_3").contains("Taco Bell");
+    cy.get("#item_2 .voteItemDown").click();
+    cy.get(".listItem#item_0").contains("On Tap");
+    cy.get(".listItem#item_1").contains("Waffle House");
+    cy.get(".listItem#item_2").contains("Taco Bell");
+    cy.get(".listItem#item_3").contains("McDonald's");
   });
 });
